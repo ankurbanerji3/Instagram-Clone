@@ -1,0 +1,61 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/fc1e235b2e.js"></script>
+  <title>Instagram | Login </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #fafafa;
+    }
+    .auth-container {
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: white;
+      border: 1px solid #dbdbdb;
+      margin-top: -100px;
+    }
+    .auth-header {
+      font-size: 24px;
+      color: #262626;
+      margin-bottom: 20px;
+    }
+    .google-login {
+      display: inline-block;
+      background-color: #4285f4;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .google-login i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="auth-container">
+    <div class="auth-header">Instagram</div>
+    <a class="google-login" href="{% provider_login_url 'google' %}">
+      <i class="fab fa-google"></i> Log in with Google
+    </a>
+  </div>
+</body>
+</html>
